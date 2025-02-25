@@ -347,11 +347,11 @@ textarea.input {
   display: none
 }
 .wrapper {
-  background: #fff
+  background-color: #fafbff
 }
 .wrapper::before {
   content: "";
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -707,9 +707,29 @@ textarea.input {
     padding-bottom: 4.875rem
   }
 }
+@media (min-width:215em) {
+  .wrapper::before {
+    width: 78.125rem
+  }
+}
+@media (max-width:150em) {
+  .wrapper::before {
+    width: 46.875rem
+  }
+}
+@media (max-width:150em)and (max-width:93.75em) {
+  .wrapper::before {
+    width: 17.5rem
+  }
+}
 @media (max-width:62em) {
   .aside-menu__body {
     gap: 1rem
+  }
+}
+@media (max-width:68.75em) {
+  .wrapper::before {
+    z-index: -1
   }
 }
 @media (max-width:61.99875em) {
@@ -865,6 +885,21 @@ textarea.input {
   }
   .table__header {
     margin-bottom: clamp(2rem ,1.8415492958rem + .7042253521vw ,2.5rem)
+  }
+}
+@media (min-width:150em)and (max-width:215em) {
+  .wrapper::before {
+    width: clamp(46.875rem ,-25.2403846154rem + 48.0769230769vw ,78.125rem)
+  }
+}
+@media (max-width:150em)and (min-width:150em) {
+  .wrapper::before {
+    width: 45.625rem
+  }
+}
+@media (max-width:150em)and (min-width:93.75em)and (max-width:150em) {
+  .wrapper::before {
+    width: clamp(17.5rem ,-29.375rem + 50vw ,45.625rem)
   }
 }
 @media (min-width:62em)and (max-width:90em) {
