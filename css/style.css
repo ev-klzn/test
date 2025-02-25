@@ -413,6 +413,12 @@ body {
   -webkit-filter: drop-shadow(0 10px 60px rgba(226, 236, 249, .5));
   filter: drop-shadow(0 10px 60px rgba(226, 236, 249, .5))
 }
+.table {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap
+}
 .table__header {
   display: flex;
   justify-content: space-between;
@@ -455,17 +461,19 @@ body {
   aspect-ratio: 1/1
 }
 .table__list {
-  max-width: 60.5rem;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr auto;
-  grid-column-gap: 1rem;
   grid-row-gap: 1.5rem;
   align-items: center;
   margin-bottom: 2rem
 }
 .table__column {
   white-space: nowrap;
-  margin-bottom: 1.5rem
+  line-height: 2.2;
+  padding-right: .625rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee
 }
 .table__footer {
   display: flex;
