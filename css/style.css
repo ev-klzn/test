@@ -189,6 +189,9 @@ textarea {
   color: #292d32;
   caret-color: inherit
 }
+.input._form-focus {
+  outline: 1px solid #b5b7c0
+}
 .input[placeholder]:not([data-placeholder-nohiden])::-webkit-input-placeholder {
   -webkit-transition: opacity .3s;
   transition: opacity .3s
@@ -318,6 +321,7 @@ textarea.input {
   gap: 2rem
 }
 .user {
+  position: relative;
   display: flex;
   align-items: end;
   gap: .75rem
@@ -689,10 +693,10 @@ textarea.input {
     padding-top: 8rem
   }
   .aside-menu__itm {
-    padding-left: 2.5rem
+    padding-left: 2.375rem
   }
   .aside-menu__itm {
-    padding-right: 2.5rem
+    padding-right: 2.375rem
   }
   .table__header {
     margin-bottom: 2.5rem
@@ -851,10 +855,10 @@ textarea.input {
     padding-top: 6.25rem
   }
   .aside-menu__itm {
-    padding-left: 1.75rem
+    padding-left: 1.5rem
   }
   .aside-menu__itm {
-    padding-right: 1.75rem
+    padding-right: 1.5rem
   }
   .table__header {
     margin-bottom: 2rem
@@ -879,10 +883,10 @@ textarea.input {
     padding-top: clamp(6.25rem ,5.6954225352rem + 2.4647887324vw ,8rem)
   }
   .aside-menu__itm {
-    padding-left: clamp(1.75rem ,1.5123239437rem + 1.0563380282vw ,2.5rem)
+    padding-left: clamp(1.5rem ,1.2227112676rem + 1.2323943662vw ,2.375rem)
   }
   .aside-menu__itm {
-    padding-right: clamp(1.75rem ,1.5123239437rem + 1.0563380282vw ,2.5rem)
+    padding-right: clamp(1.5rem ,1.2227112676rem + 1.2323943662vw ,2.375rem)
   }
   .table__header {
     margin-bottom: clamp(2rem ,1.8415492958rem + .7042253521vw ,2.5rem)
