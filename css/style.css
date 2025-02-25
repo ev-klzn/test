@@ -115,11 +115,18 @@ h6 {
   font-weight: inherit;
   font-size: inherit
 }
+body {
+  opacity: 0;
+  transition: opacity .5s
+}
 .lock body {
   overflow: hidden;
   touch-action: none;
   -ms-scroll-chaining: none;
   overscroll-behavior: none
+}
+.loaded body {
+  opacity: 1
 }
 .wrapper {
   min-height: 100%;
@@ -448,12 +455,6 @@ textarea.input {
   color: #9197b3
 }
 .aside-menu__link {
-  opacity: 0;
-  -webkit-transform: translate(0,10%);
-  transform: translate(0,10%);
-  transition: opacity .5s,-webkit-transform .5s;
-  transition: transform .5s,opacity .5s;
-  transition: transform .5s,opacity .5s,-webkit-transform .5s;
   display: flex;
   gap: .875rem;
   align-items: center;
@@ -463,12 +464,6 @@ textarea.input {
   font-weight: 400;
   line-height: normal;
   letter-spacing: -.14px
-}
-.aside-menu__link._watcher-view {
-  transition-delay: .1s;
-  -webkit-transform: translate(0,0);
-  transform: translate(0,0);
-  opacity: 1
 }
 .aside-menu__link div {
   display: flex;
@@ -601,6 +596,54 @@ textarea.input {
 .table__column:nth-child(6n) {
   padding-right: 0;
   text-align: center
+}
+.table__column:nth-child(1n) {
+  opacity: 0;
+  transition: opacity .5s
+}
+.table__column:nth-child(1n)._watcher-view {
+  transition-delay: .1s;
+  opacity: 1
+}
+.table__column:nth-child(2n) {
+  opacity: 0;
+  transition: opacity .5s
+}
+.table__column:nth-child(2n)._watcher-view {
+  transition-delay: .2s;
+  opacity: 1
+}
+.table__column:nth-child(3n) {
+  opacity: 0;
+  transition: opacity .5s
+}
+.table__column:nth-child(3n)._watcher-view {
+  transition-delay: .3s;
+  opacity: 1
+}
+.table__column:nth-child(4n) {
+  opacity: 0;
+  transition: opacity .5s
+}
+.table__column:nth-child(4n)._watcher-view {
+  transition-delay: .4s;
+  opacity: 1
+}
+.table__column:nth-child(5n) {
+  opacity: 0;
+  transition: opacity .5s
+}
+.table__column:nth-child(5n)._watcher-view {
+  transition-delay: .5s;
+  opacity: 1
+}
+.table__column:nth-child(6n) {
+  opacity: 0;
+  transition: opacity .5s
+}
+.table__column:nth-child(6n)._watcher-view {
+  transition-delay: .6s;
+  opacity: 1
 }
 .table__footer {
   display: flex;
@@ -834,6 +877,24 @@ textarea.input {
   .aside {
     padding-top: 5.625rem;
     padding-bottom: .3125rem
+  }
+  .table__column:nth-child(1n)._watcher-view {
+    transition-delay: .1s
+  }
+  .table__column:nth-child(2n)._watcher-view {
+    transition-delay: .1s
+  }
+  .table__column:nth-child(3n)._watcher-view {
+    transition-delay: .1s
+  }
+  .table__column:nth-child(4n)._watcher-view {
+    transition-delay: .1s
+  }
+  .table__column:nth-child(5n)._watcher-view {
+    transition-delay: .1s
+  }
+  .table__column:nth-child(6n)._watcher-view {
+    transition-delay: .1s
   }
 }
 @media (max-width:47.99875em)and (any-hover:none) {
