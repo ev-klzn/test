@@ -392,6 +392,7 @@ textarea.input {
   aspect-ratio: 1/1
 }
 .aside__name {
+  display: inline;
   align-self: end;
   color: #000;
   font-size: 1.625rem;
@@ -914,7 +915,7 @@ textarea.input {
   .aside-menu__item:hover {
     background: #5932ea
   }
-  .aside-menu__item:hover div {
+  .aside-menu__item:hover span {
     color: #fff
   }
   .pagination button:hover {
