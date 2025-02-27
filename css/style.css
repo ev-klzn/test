@@ -363,11 +363,9 @@ textarea.input {
 .wrapper::before {
   content: "";
   z-index: 0;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  bottom: 0;
   left: 0;
-  width: 21.875rem;
-  width: 30%;
   height: 100%;
   background: #fff;
   box-shadow: 0 10px 60px 0 rgba(226,236,249,.5)
@@ -777,9 +775,15 @@ textarea.input {
     gap: 1rem
   }
 }
+@media (max-width:72.1875em)and (max-width:62em) {
+  .wrapper::before {
+    width: 17.5rem
+  }
+}
 @media (max-width:68.75em) {
   .wrapper::before {
-    z-index: -1
+    z-index: -1;
+    position: absolute
   }
 }
 @media (max-width:61.99875em) {
@@ -992,6 +996,16 @@ textarea.input {
 @media (max-width:150em)and (min-width:93.75em)and (max-width:150em) {
   .wrapper::before {
     width: clamp(17.5rem ,-29.375rem + 50vw ,45.625rem)
+  }
+}
+@media (max-width:72.1875em)and (min-width:72.1875em) {
+  .wrapper::before {
+    width: 17.5rem
+  }
+}
+@media (max-width:72.1875em)and (min-width:62em)and (max-width:72.1875em) {
+  .wrapper::before {
+    width: clamp(17.5rem ,17.5rem + 0 ,17.5rem)
   }
 }
 @media (min-width:62em)and (max-width:90em) {
